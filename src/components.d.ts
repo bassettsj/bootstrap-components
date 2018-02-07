@@ -6,32 +6,38 @@
 
 
 import {
-  MyComponent as MyComponent
-} from './components/my-component/my-component';
+  BsButton as BsButton
+} from './components/button/button';
 
 declare global {
-  interface HTMLMyComponentElement extends MyComponent, HTMLElement {
+  interface HTMLBsButtonElement extends BsButton, HTMLElement {
   }
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLBsButtonElement: {
+    prototype: HTMLBsButtonElement;
+    new (): HTMLBsButtonElement;
   };
   interface HTMLElementTagNameMap {
-    "my-component": HTMLMyComponentElement;
+    "bs-button": HTMLBsButtonElement;
   }
   interface ElementTagNameMap {
-    "my-component": HTMLMyComponentElement;
+    "bs-button": HTMLBsButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-component": JSXElements.MyComponentAttributes;
+      "bs-button": JSXElements.BsButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
+    export interface BsButtonAttributes extends HTMLAttributes {
+      active?: boolean;
+      bsBlock?: boolean;
+      bsOutline?: boolean;
+      bsSize?: string;
+      bsType?: string;
+      disabled?: boolean;
+      href?: string;
     }
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }

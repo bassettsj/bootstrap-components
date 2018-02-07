@@ -1,8 +1,8 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'bootstrapcomponents',
   generateDistribution: true,
   bundles: [
-    { components: ['my-component'] }
+    { components: ['bs-button'] }
   ]
 };
 
